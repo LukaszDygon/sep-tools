@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "sep-tools"
+version = "0.1.0"
+description = "tools for using Stanford Encyclopedia of Philosophy effectively"
+authors = ["lukaszdygon <ldygon94@gmail.com>"]
+license = "mit"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
