@@ -20,7 +20,7 @@ Before running SEP Crawler, ensure you have Python 3 and Poetry installed.
 
    This will create a `.venv` directory within your project folder and install the required dependencies (`requests`, `beautifulsoup4`) as specified in the `pyproject.toml` file.
 
-2. **Activate the Virtual Environment**:
+1. **Activate the Virtual Environment**:
    To activate the virtual environment, use the following command:
 
    ```bash
@@ -32,6 +32,12 @@ Before running SEP Crawler, ensure you have Python 3 and Poetry installed.
    ```cmd
    .\.venv\Scripts\activate
    ```
+1. Install [Docker](https://docs.docker.com/engine/install/)
+1. Install [just](https://github.com/casey/just)
+1. Install [Helm](https://helm.sh/docs/intro/install/)
+1. Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
+1. Install [minikube](https://minikube.sigs.k8s.io/docs/start/)
+
 
 ### Running the Script
 

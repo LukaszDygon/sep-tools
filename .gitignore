@@ -160,4 +160,6 @@ cython_debug/
 #.idea/
 
 .venv
+.secrets
+.DS_Store
 data
