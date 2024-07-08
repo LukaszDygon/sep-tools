@@ -18,7 +18,7 @@ Before running SEP Crawler, ensure you have Python 3 and Poetry installed.
    poetry install
    ```
 
-   This will create a `.venv` directory within your project folder and install the required dependencies (`requests`, `beautifulsoup4`) as specified in the `pyproject.toml` file.
+   This will create a `.venv` directory within your project folder and install the required dependencies as specified in the `pyproject.toml` file.
 
 1. **Activate the Virtual Environment**:
    To activate the virtual environment, use the following command:
