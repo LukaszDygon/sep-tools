@@ -1,3 +1,4 @@
+import argparse
 import os
 import requests
 from bs4 import BeautifulSoup
@@ -46,8 +47,15 @@ def fetch_content(url: str, output_folder: str):
     else:
         print('Failed to fetch page:', url)
 
-index_url = 'https://plato.stanford.edu/archives/spr2024/contents.html'
-output_folder = os.path.join('data', 'html')
-if not os.path.exists(output_folder):
-    os.mkdir(output_folder)
-crawl_index_page(index_url, output_folder=output_folder)
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--url', '-u', default='https://plato.stanford.edu/archives/spr2024/contents.html')
+    parser.add_argument('--output_folder', '-o', default=os.path.join('data', 'html'))
+    args = parser.parse_args()
+
+    os.makedirs(args.output_folder, exist_ok=True)
+
+    crawl_index_page(url=args.url, output_folder=args.output_folder)
+
+if __name__ == '__main__':
+    main()

@@ -41,15 +41,33 @@ Before running SEP Crawler, ensure you have Python 3 and Poetry installed.
 
 ### Running the Script
 
-1. **Set the Index URL and Output Folder**: At the bottom of the `sep_crawler.py` script, set the `index_url` variable to the URL of the SEP archive index page you want to crawl. Also, specify the `output_folder` where the HTML files will be saved.
+#### Download sep index
 
-2. **Execute the Script**: Run the script from your command line within the activated virtual environment:
+```bash
+python sep_crawler.py
+```
 
-   ```bash
-   python sep_crawler.py
-   ```
+Or, to set the index URL and output folder using command-line arguments:
 
-   The script will create the output directory if it doesn't exist, fetch each linked page from the index page, and save the content in the specified output folder.
+```bash
+python sep_crawler.py --url https://plato.stanford.edu/archives/sum2023/contents.html --output_folder data/html/sum2023
+```
+
+The script will create the output directory if it doesn't exist, fetch each linked page from the index page, and save the content in the specified output folder.
+
+#### Convert entries to Markdown
+
+```bash
+python sep_to_markdown.py data/html
+```
+
+This will convert all the HTML files in the `data/html` directory to Markdown and save them to the `data/html/md` directory.
+
+You can also specify a custom output folder using the `--output_folder` argument:
+
+```bash
+python sep_to_markdown.py data/html --output_folder data/markdown
+```
 
 ### Output
 
