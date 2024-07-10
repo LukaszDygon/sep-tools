@@ -15,22 +15,17 @@ init:
 
   alias kubectl="minikube kubectl --"
 
-
-# show all pods
-show-pods:
-  kubectl get pods --namespace=default -l app.kubernetes.io/component=opensearch-cluster-master -w
-
-kube-start:
+kstart:
   minikube start
 
-kube-stop:
+kstop:
   minikube stop
 
-kube-deploy:
+kdeploy:
   helm install {{DEPLOYMENT_NAME}} opensearch/opensearch --values=values.yaml
 
-kube-delete:
+kdelete:
   helm delete {{DEPLOYMENT_NAME}}   
 
-kube-show:
+kshow:
   kubectl get pods --namespace=default -l app.kubernetes.io/component=opensearch-cluster-master -w
