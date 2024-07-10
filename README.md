@@ -68,11 +68,3 @@ You can also specify a custom output folder using the `--output_folder` argument
 ```bash
 python sep_to_markdown.py data/html --output_folder data/markdown
 ```
-
-### Output
-
-The script saves each fetched page's content in an HTML file named after the last segment of the page's URL. These files are stored in the directory specified by the `output_folder` variable.
-
-### Customization
-
-You can customize the script by modifying the `index_url` and `output_folder` to point to different SEP archives or save locations.
