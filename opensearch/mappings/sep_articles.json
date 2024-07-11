@@ -1,0 +1,45 @@
+{
+    "mappings": {
+      "properties": {
+        "first_published": {
+          "type": "date"
+        },
+        "last_edit": {
+          "type": "date"
+        },
+        "toc": {
+          "properties": {
+            "id": {
+              "type": "keyword"
+            },
+            "number": {
+              "type": "keyword"
+            },
+            "title": {
+              "type": "text"
+            }
+          }
+        },
+        "sections": {
+          "properties": {
+            "id": {
+              "type": "keyword"
+            },
+            "content": {
+              "type": "text"
+            }
+          }
+        },
+        "bibliography": {
+          "properties": {
+            "index": {
+              "type": "integer"
+            },
+            "content": {
+              "type": "text"
+            }
+          }
+        }
+      }
+    }
+  }
